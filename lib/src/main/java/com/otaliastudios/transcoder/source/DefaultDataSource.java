@@ -174,9 +174,6 @@ public abstract class DefaultDataSource implements DataSource {
     @Override
     public void releaseTrack(@NonNull TrackType type) {
         mSelectedTracks.remove(type);
-        if (mSelectedTracks.isEmpty()) {
-            release();
-        }
     }
 
     protected void release() {
